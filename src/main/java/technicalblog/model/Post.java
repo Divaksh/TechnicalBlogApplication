@@ -1,11 +1,17 @@
 package technicalblog.model;
 
 import java.util.Date;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class Post {
+
   private String title;
   private String body;
   private Date date;
+  public Post() {
+    System.out.println("*** Post Model ***");
+  }
 
   public String getTitle() {
     return title;
@@ -23,7 +29,7 @@ public class Post {
     this.body = body;
   }
 
-  public Date getDate(Date date) {
+  public Date getDate() {
     return this.date;
   }
 
