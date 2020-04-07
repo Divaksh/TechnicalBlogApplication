@@ -1,5 +1,9 @@
 <!Doctype html>
 
+<!-------------------------------------------------------------------------------------------------------->
+<!--This file contains all posts along with fragment for the user to see the login and register options.-->
+<!-------------------------------------------------------------------------------------------------------->
+
 <html xmlns:th="http://thymeleaf.org">
 <head>
   <title>Spring MVC Application</title>
@@ -10,6 +14,7 @@
 
 <h1>All Posts</h1>
 <main id="posts">
+<!--  th:each ="p: ${posts}". This instruction iterates over the list of posts received from HomeController.-->
   <post th:each="p : ${posts}">
     <h2 th:text="${p.title}"></h2>
     <!--    <i>Posted On: </i><span th:text="${p.date}"></span>-->

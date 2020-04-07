@@ -1,11 +1,22 @@
 <!Doctype html>
 
+<!--------------------------------------------------------------------------------------------------->
+<!--It presents a set of reusable HTML code such as the headers for logged-in and logged-out users.-->
+<!--------------------------------------------------------------------------------------------------->
+
 <html xmlns:th="http://thymeleaf.org">
 <head th:fragment="site-head"></head>
 
 <body>
 <header th:fragment="logged-out" th:remove="tag">
   <header>
+    <!--    th:href="@{/users/login}" overwrites href="users/login.html". This means that instead of being-->
+    <!--    redirected to “users/login.html”, when one clicks on login, he/she will be redirected to-->
+    <!--    http://localhost:8080/users/login.-->
+
+    <!--    i.e. “Login” button is clicked, the web browser will request for the web page mapped to-->
+    <!--    “http://localhost:8080/users/login”. After that, the dispatcher servlet scans for controller-->
+    <!--    class with the method mapped with “/users/login”.-->
     <a href="users/login.html" th:href="@{users/login}">Login</a>
     <a href="users/registration.html" th:href="@{users/registration}">Registration</a>
   </header>
@@ -13,6 +24,11 @@
 
 <header th:fragment="logged-in" th:remove="tag">
   <header>
+<!--    The User controller needs to address the functionality of the logout button and hence needs to-->
+<!--    have a logout method.-->
+<!--    This logout button will be mapped to the URL “users/logout” and thus the UserController class-->
+<!--    should implement a method that is mapped to the “users/logout” url on a POST request. This-->
+<!--    method should redirect the user back to the home page with the list of 3 posts.-->
     <form method="post">
       <input type="submit" value="Logout"/>
     </form>

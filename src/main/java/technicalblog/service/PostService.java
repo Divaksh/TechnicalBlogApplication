@@ -1,12 +1,16 @@
 package technicalblog.service;
 
-//This will handle CRUD for the Post
+/* ------------------------------------------------------------------- */
+/* PostService takes care of all the CRUD operations related to posts
+/* ------------------------------------------------------------------- */
 
 import java.util.ArrayList;
 import java.util.Date;
 import org.springframework.stereotype.Service;
 import technicalblog.model.Post;
 
+// The service class is annotated with @Service to inform the Spring Boot framework that the PostService class is a service in the application.
+// It registers the class in the Spring container and tells Spring that this class is a service class that provides business logic in the application.
 @Service
 public class PostService {
 

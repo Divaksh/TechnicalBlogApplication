@@ -9,6 +9,10 @@ import technicalblog.service.PostService;
 
 import java.util.ArrayList;
 
+/* ------------------------------------------------------------------------------------- */
+/* It will address post-related functionalities, such as returning the posts.html page.
+/* ------------------------------------------------------------------------------------- */
+
 @Controller
 public class PostController {
 

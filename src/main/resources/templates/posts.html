@@ -1,5 +1,9 @@
 <!Doctype html>
 
+<!------------------------------------------------------------------------>
+<!--This is the page that a user will be directed to after logging in.-->
+<!------------------------------------------------------------------------>
+
 <html xmlns:th="http://thymeleaf.org">
 
 <head th:replace="layout :: site-head">
@@ -7,7 +11,9 @@
 </head>
 
 
-
+<!--"th:fragment="logged in"" indicates that this is a piece of HTML code named 'logged in', which can-->
+<!--be used by other HTML files. This is not a complete HTML file in itself, but just a reusable piece-->
+<!--of HTML code.-->
 <header th:replace="layout :: logged-in"></header>
 
 <body>

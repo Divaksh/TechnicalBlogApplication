@@ -2,6 +2,10 @@ package technicalblog.model;
 
 import org.springframework.stereotype.Repository;
 
+/* ------------------------------------------------------------------------------ */
+/* It will store user information. It has two attributes: username and password.
+/* ------------------------------------------------------------------------------ */
+
 @Repository
 public class User {
   private String username;
