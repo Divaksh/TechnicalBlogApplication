@@ -25,15 +25,8 @@ public class HomeController {
     //Not required as Autowire is taking care of all dependencies
     //PostService postService= new PostService();
 
-    //Single post
-    Post post = new Post();
-    post.setTitle("Single Post");
-    post.setBody("This is single post");
-    post.setDate(new Date());
-
     // first posts is key to get the object given as second parameter
     model.addAttribute("posts", postService.getAllPosts());
-    model.addAttribute("post", post);
 
     return "index";
   }

@@ -5,25 +5,19 @@
   <title>Spring MVC Application</title>
 </head>
 <body>
+
+<header th:replace="layout :: logged-out"></header>
+
 <h1>All Posts</h1>
 <main id="posts">
   <post th:each="p : ${posts}">
     <h2 th:text="${p.title}"></h2>
-<!--    <i>Posted On: </i><span th:text="${p.date}"></span>-->
-     <i>Posted On: </i> <span th:text="${#dates.format(p.date,'dd-MMM-yyyy')}"></span>
+    <!--    <i>Posted On: </i><span th:text="${p.date}"></span>-->
+    <i>Posted On: </i> <span th:text="${#dates.format(p.date,'dd-MMM-yyyy')}"></span>
     <div>
       <p th:text="${p.body}"></p>
     </div>
   </post>
 </main>
-  <h1>Single Post</h1>
-  <main id="post">
-    <h2 th:text="${post.title}"></h2>
-    <!--    <i>Posted On: </i><span th:text="${post.date}"></span>-->
-    <i>Posted On: </i> <span th:text="${#dates.format(post.date,'dd-MMM-yyyy')}"></span>
-    <div>
-      <p th:text="${post.body}"></p>
-    </div>
-  </main>
 </body>
 </html>
