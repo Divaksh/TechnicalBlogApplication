@@ -5,6 +5,7 @@
 <!--------------------------------------------------------------------------------------------------->
 
 <html xmlns:th="http://thymeleaf.org">
+
 <head th:fragment="site-head"></head>
 
 <body>
@@ -17,8 +18,8 @@
     <!--    i.e. “Login” button is clicked, the web browser will request for the web page mapped to-->
     <!--    “http://localhost:8080/users/login”. After that, the dispatcher servlet scans for controller-->
     <!--    class with the method mapped with “/users/login”.-->
-    <a href="users/login.html" th:href="@{users/login}">Login</a>
-    <a href="users/registration.html" th:href="@{users/registration}">Registration</a>
+    <a href="users/login.html" th:href="@{/users/login}">Login</a>
+    <a href="users/registration.html" th:href="@{/users/registration}">Registration</a>
   </header>
 </header>
 
@@ -29,7 +30,7 @@
 <!--    This logout button will be mapped to the URL “users/logout” and thus the UserController class-->
 <!--    should implement a method that is mapped to the “users/logout” url on a POST request. This-->
 <!--    method should redirect the user back to the home page with the list of 3 posts.-->
-    <form method="post">
+    <form method="post" th:action="@{/users/logout}">
       <input type="submit" value="Logout"/>
     </form>
   </header>
