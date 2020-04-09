@@ -1,9 +1,11 @@
 package technicalblog.controller;
 
+import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import technicalblog.model.Post;
 import technicalblog.service.PostService;
 
 /* ----------------------------------------------------------------------------------------- */
@@ -22,7 +24,7 @@ public class HomeController {
   private PostService postService;
 
   public HomeController() {
-    System.out.println("*** HomeController ***");
+    System.out.println("*** Home Controller ***");
   }
 
   //  The @RequestMapping instruction will map the URL of the web page with the corresponding controller method,
@@ -34,8 +36,8 @@ public class HomeController {
     //PostService postService= new PostService();
 
     // first posts is key to get the object given as second parameter
-    model.addAttribute("posts", postService.getAllPosts());
-
+    ArrayList<Post> list = postService.getAllPosts();
+    model.addAttribute("posts", list);
     return "index";
   }
 }

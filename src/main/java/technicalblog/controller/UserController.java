@@ -14,6 +14,10 @@ import technicalblog.service.UserService;
 @Controller
 public class UserController {
 
+  public UserController(){
+    System.out.println("*** User Controller ***");
+  }
+
   @Autowired
   private UserService userService;
 

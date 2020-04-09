@@ -30,6 +30,7 @@
 <!--    This logout button will be mapped to the URL “users/logout” and thus the UserController class-->
 <!--    should implement a method that is mapped to the “users/logout” url on a POST request. This-->
 <!--    method should redirect the user back to the home page with the list of 3 posts.-->
+    <a href="createpost" th:href="@{/posts/create}">Create Post</a>
     <form method="post" th:action="@{/users/logout}">
       <input type="submit" value="Logout"/>
     </form>

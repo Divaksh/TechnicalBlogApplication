@@ -18,7 +18,6 @@ public class PostService {
     System.out.println("*** PostService ***");
   }
 
-
   public ArrayList<Post> getAllPosts() {
     ArrayList<Post> posts = new ArrayList<>();
 
@@ -57,4 +56,7 @@ public class PostService {
 
   }
 
+
+  public void createPost (Post newPost){
+  }
 }
